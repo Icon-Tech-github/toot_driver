@@ -25,13 +25,14 @@ class OrderDetailsModel {
   PaymentMethod? paymentMethod;
   List<Details>? details;
   Branch ?branch;
-
+  Address? address;
   PaymentMethod? orderMethod;
 
   OrderDetailsModel(
       {this.id,
         this.branch,
         this.uuid,
+        this.address,
         this.subtotal,
         this.discount,
         this.discountType,
@@ -67,6 +68,7 @@ class OrderDetailsModel {
     paymentMethodId = json['payment_method_id'];
     orderMethodId = json['order_method_id'];
     createdAt = json['created_at'];
+    address= json["address"] == null ? null : Address.fromJson(json["address"]);
     updatedAt = json['updated_at'];
     branch = Branch.fromJson(json["branch"]);
     orderStatus = json['order_status'] != null

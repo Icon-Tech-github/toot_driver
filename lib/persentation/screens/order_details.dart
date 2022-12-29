@@ -13,7 +13,7 @@ import '../../theme.dart';
 import '../../translations/locale_keys.g.dart';
 
 class OrderDetailsScreen extends StatelessWidget {
-
+  const OrderDetailsScreen({Key? key,}) : super(key: key);
 
 
 
@@ -99,7 +99,7 @@ class OrderDetailsScreen extends StatelessWidget {
                                   Icon(Icons.location_on_outlined,color: Colors.green,size: 35,),
                                   SizedBox(width: 10,),
                                   Text(
-                                    order.branch!.title!.en.toString(),
+                                 order.address?.notes ??"",
                                     style: TextStyle(fontSize: 22,color:  AppTheme.nearlyBlack,),
                                   ),
                                 ],
@@ -178,7 +178,7 @@ class OrderDetailsScreen extends StatelessWidget {
                                                         softWrap: false,style: TextStyle( fontSize: size.width * .04,fontWeight: FontWeight.bold,height: size.height * .003),),
                                                     ),
                                                     // SizedBox(height: 5,),
-                                                    Text('${LocaleKeys.quantity.tr()} / ${order.details![0].quantity}',style: TextStyle( fontSize:  size.width * .035,height: size.height * .002),),
+                                                    Text('${LocaleKeys.quantity.tr()} / ${order.details![index].quantity}',style: TextStyle( fontSize:  size.width * .035,height: size.height * .002),),
                                                     SizedBox(height: size.height * .005,),
 
                                                     Column(

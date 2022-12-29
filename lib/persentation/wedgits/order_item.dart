@@ -225,39 +225,53 @@ Row(
   ],
 ),
             SizedBox(height: size.height * .006,),
-            if(OrderCubit.categoryNum != 3)
-            Padding(
-              padding: const EdgeInsets.only(left: 58.0),
-              child: Divider(
-                thickness: 1.1,
-              ),
-            ),
+            // if(OrderCubit.categoryNum != 3)
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 58.0),
+            //   child: Divider(
+            //     thickness: 1.1,
+            //   ),
+            // ),
             if(OrderCubit.categoryNum != 3)
             SizedBox(height: size.height * .01,),
             if(OrderCubit.categoryNum != 3)
-            Padding(
-              padding: const EdgeInsets.only(left: 58.0),
-              child: Text( orders.address?.notes??"",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    // fontFamily: fontName,
-                    fontWeight: FontWeight.bold,
-                    fontSize: size.width * .035,
-                    letterSpacing: 0.18,
-                    height: size.height *.002,
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) =>   BlocProvider<OrderDetailsCubit>(
+                    create: (BuildContext context) => OrderDetailsCubit(OrderDetailsRepo(), orders.id!),
+                    child: OrderDetailsScreen()),));
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 58.0),
+                child: Row(
+                  children: [
+                    Text( "See more details ....",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          // fontFamily: fontName,
+                          fontWeight: FontWeight.bold,
+                          fontSize: size.width * .045,
+                          letterSpacing: 0.18,
+                          height: size.height *.002,
 
-                    color: Colors.grey,
-                  )),
+                          color: AppTheme.secondary,
+                        )),
+                    Icon(Icons.keyboard_arrow_right_outlined,color: AppTheme.secondary,)
+                  ],
+                ),
+              ),
             ),
             if(OrderCubit.categoryNum != 3)
             SizedBox(height: size.height * .01,),
             if(OrderCubit.categoryNum != 3)
             Padding(
-              padding: const EdgeInsets.only(left: 58.0),
+              padding: const EdgeInsets.only(left: 8.0),
               child: Divider(
                 thickness: 1.1,
               ),
             ),
+            if(OrderCubit.categoryNum != 3)
+              SizedBox(height: size.height * .01,),
 if(OrderCubit.categoryNum != 3)
             SizedBox(
               height: size.height *.07,
