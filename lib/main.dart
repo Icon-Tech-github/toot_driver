@@ -7,6 +7,7 @@ import 'package:overlay_support/overlay_support.dart';
 import 'package:shormeh_delivery/persentation/screens/home.dart';
 import 'package:shormeh_delivery/persentation/screens/login.dart';
 import 'package:shormeh_delivery/translations/codegen_loader.g.dart';
+import 'dart:ui' as ui;
 
 import 'bloc/auth_bloc/auth_cubit.dart';
 import 'bloc/home_bloc/order_cubit.dart';
@@ -20,7 +21,8 @@ void main()async {
   await EasyLocalization.ensureInitialized();
   await LocalStorage.init();
   await Firebase.initializeApp();
-
+  if(LocalStorage.getData(key: "lang") == null)
+    LocalStorage.saveData(key: "lang", value:  ui.window.locale.languageCode);
   runApp(EasyLocalization(
       path: "assets/translations",
       supportedLocales: [

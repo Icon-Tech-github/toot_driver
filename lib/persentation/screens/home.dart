@@ -355,7 +355,7 @@ print("lllllllllllllll");
                             //       height:  size.height * .003,
                             //       color: AppTheme.nearlyBlack,
                             //     )),
-                            Text("Success",
+                            Text(LocaleKeys.success.tr(),
                                 style: TextStyle(
                                   // fontFamily: fontName,
                                   fontWeight: FontWeight.bold,
@@ -400,7 +400,7 @@ print("lllllllllllllll");
                             //       height:  size.height * .003,
                             //       color: AppTheme.nearlyBlack,
                             //     )),
-                            Text("Rejected",
+                            Text(LocaleKeys.rejected.tr(),
                                 style: TextStyle(
                                   // fontFamily: fontName,
                                   fontWeight: FontWeight.bold,
@@ -433,7 +433,7 @@ print("lllllllllllllll");
                                 color: AppTheme.white,
                               ),
                             ),
-                            Text("Failed",
+                            Text(LocaleKeys.failed.tr(),
                                 style: TextStyle(
                                   // fontFamily: fontName,
                                   fontWeight: FontWeight.bold,

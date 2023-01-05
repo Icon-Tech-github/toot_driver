@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:bloc/bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:meta/meta.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:shormeh_delivery/data/models/order.dart';
+import 'package:shormeh_delivery/translations/locale_keys.g.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
@@ -196,7 +198,7 @@ print(newTotal);
             context,
             Card(
               child: CustomSnackBar.success(
-                message: "Bravo 3alekkkk",
+                message: LocaleKeys.accept_order.tr(),
                 backgroundColor: Colors.white,
                 textStyle: TextStyle(
                     color: Colors.black,
@@ -228,7 +230,7 @@ print(newTotal);
             context,
             Card(
               child: CustomSnackBar.success(
-                message: "Msh Bravo 3alekkkk",
+                message: LocaleKeys.accept_order.tr(),
                 backgroundColor: Colors.white,
                 textStyle: TextStyle(
                     color: Colors.black,

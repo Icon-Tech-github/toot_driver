@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shormeh_delivery/bloc/home_bloc/order_cubit.dart';
 import 'package:shormeh_delivery/data/models/order.dart';
+import 'package:shormeh_delivery/local_storage.dart';
 import 'package:shormeh_delivery/persentation/screens/order_details.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -245,7 +246,7 @@ Row(
                 padding: const EdgeInsets.only(left: 58.0),
                 child: Row(
                   children: [
-                    Text( "See more details ....",
+                    Text( LocaleKeys.see_more.tr(),
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           // fontFamily: fontName,
@@ -256,7 +257,10 @@ Row(
 
                           color: AppTheme.secondary,
                         )),
-                    Icon(Icons.keyboard_arrow_right_outlined,color: AppTheme.secondary,)
+                    LocalStorage.getData(key: "lang") == "ar"?
+                    Icon( Icons.keyboard_arrow_left_outlined,color: AppTheme.secondary,):
+
+                    Icon( Icons.keyboard_arrow_right_outlined,color: AppTheme.secondary,)
                   ],
                 ),
               ),

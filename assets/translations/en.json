@@ -205,6 +205,8 @@
   "change_pass_translate": "Change Password",
   "old_pass_hint": "Old password",
   "new_pass_hint": "New password",
+  "accept_order": "sent successfully",
+  "see_more": "See more details...",
   "reject_reason": "Enter the reason for rejection",
   "failed_reason":"Enter the reason for the delivery failure",
   "branch_txt": "Select a branch so we can help you to find whatever you want and deliver it"

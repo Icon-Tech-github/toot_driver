@@ -210,6 +210,8 @@ abstract class LocaleKeys {
   static const available = "available";
   static const reject_reason = "reject_reason";
   static const failed_reason = "failed_reason";
+  static const accept_order = "accept_order";
+  static const see_more = "see_more";
 
 
 
